@@ -1,0 +1,19 @@
+# 📊 Dashboard
+streamlit==1.47.0
+plotly==6.2.0
+pandas==2.3.1
+
+# 🤗 NLP (BERT)
+transformers==4.53.3
+torch==2.7.1
+
+# 🌐 Google BigQuery
+google-cloud-bigquery==3.35.0
+google-auth==2.40.3
+pandas-gbq==0.29.2
+
+# 🔐 Env & Auth
+python-dotenv==1.1.1
+
+# ✅ Optional utilities
+tqdm==4.66.5
