@@ -8,3 +8,17 @@ venv/
 .idea/
 .DS_Store
 *.json
+gcp_key.json
+
+# Streamlit secrets
+.streamlit/secrets.toml
+
+# Data files (optional - uncomment if you don't want to commit CSV files)
+# *.csv
+
+# Media files
+*.webm
+*.mp4
+
+# Temporary files
+tempCodeRunnerFile.py

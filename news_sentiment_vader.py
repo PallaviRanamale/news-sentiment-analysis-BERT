@@ -31,5 +31,5 @@ df["sentiment_description"] = df["description"].apply(get_sentiment)
 df.to_csv("news_with_sentiment.csv", index=False)
 
 # ✅ Preview result
-print("✅ Sentiment analysis complete!")
+print("Sentiment analysis complete!")
 print(df[["title", "sentiment_title", "description", "sentiment_description"]].head())
