@@ -20,7 +20,7 @@ This project demonstrates a complete data pipeline for news sentiment analysis:
 
 ## 🚀 Live Demo
 
-👉 **[View Live Dashboard on Streamlit Cloud](https://your-app-name.streamlit.app)**
+👉 **[View Live Dashboard on Streamlit Cloud](https://news-sentiment-analysis-bert-hudbufs4kahomsxd4vewwq.streamlit.app/)**
 
 *Note: Update the link above with your Streamlit Cloud deployment URL*
 
