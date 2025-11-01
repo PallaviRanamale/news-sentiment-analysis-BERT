@@ -211,7 +211,6 @@ streamlit run dashboard_local.py
 ```bash
 streamlit run dashboard.py
 ```
-
 ## 📁 Project Structure
 
 ```
@@ -405,10 +404,11 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ## 👤 Author
 
-**Pallavi Ranamale**
+**Pallavi Ranamale**  
+📍 Pune, India
 
-- GitHub: [@your-username](https://github.com/your-username)
-- LinkedIn: [Your LinkedIn](https://linkedin.com/in/your-profile)
+- GitHub: [@PallaviRanamale](https://github.com/PallaviRanamale)
+- LinkedIn: [Pallavi Ranamale](https://www.linkedin.com/in/pallavi-ranamale)
 
 ## 🙏 Acknowledgments
 
