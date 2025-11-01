@@ -1,10 +1,48 @@
 import streamlit as st
 import pandas as pd
 import plotly.express as px
+import os
+from dotenv import load_dotenv
+
+# Load environment variables for local development
+load_dotenv()
+
+# ✅ Helper function to check secrets (works both locally and on Streamlit Cloud)
+def get_secret(key):
+    """Check if secret exists in Streamlit secrets or environment variable."""
+    try:
+        if hasattr(st, 'secrets') and key in st.secrets:
+            return st.secrets[key]
+    except:
+        pass
+    return os.getenv(key)
 
 # ✅ Set up Streamlit layout
 st.set_page_config(page_title="News Dashboard", layout="wide")
 st.title("News Sentiment Dashboard (Local)")
+
+# Check secrets status
+has_gnews_api = bool(get_secret("API_KEY"))
+has_openai_api = bool(get_secret("OPENAI_API_KEY"))
+
+# Show secrets status in sidebar
+st.sidebar.markdown("### 🔐 API Configuration")
+st.sidebar.markdown(f"**GNews API:** {'✅ Configured' if has_gnews_api else '❌ Not configured'}")
+st.sidebar.markdown(f"**OpenAI API:** {'✅ Configured' if has_openai_api else '❌ Not configured'}")
+
+if not has_gnews_api or not has_openai_api:
+    with st.sidebar.expander("ℹ️ How to add API keys"):
+        st.markdown("""
+        1. Go to **share.streamlit.io**
+        2. Click your app → **⋮ Menu** → **Settings**
+        3. Click **Secrets** in sidebar
+        4. Add:
+        ```toml
+        API_KEY = "your_key"
+        OPENAI_API_KEY = "your_key"
+        ```
+        5. Click **Save**
+        """)
 
 # File selection
 st.sidebar.markdown("### Select Data Source")
